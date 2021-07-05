@@ -1,0 +1,9 @@
+//分别输出 16 位输入信号的高 8 位 和低 8 位。
+`default_nettype none     // Disable implicit nets. Reduces some types of bugs.
+module top_module( 
+    input wire [15:0] in,
+    output wire [7:0] out_hi,
+    output wire [7:0] out_lo );
+    assign out_hi = in[15:8];       //输出高八位
+    assign out_lo = in[7:0];        //输出低八位
+endmodule
